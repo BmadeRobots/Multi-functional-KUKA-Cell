@@ -1,0 +1,3 @@
+[console_scripts]
+dual_kuka_node = kuka_robodk_ros2.dual_kuka_bidirectional:main
+

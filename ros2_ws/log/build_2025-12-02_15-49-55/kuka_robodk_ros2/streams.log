@@ -1,0 +1,24 @@
+[0.362s] Invoking command in '/home/bmade-robotics/ros2_ws/src/kuka_robodk_ros2': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/bmade-robotics/ros2_ws/build/kuka_robodk_ros2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bmade-robotics/ros2_ws/install/kuka_robodk_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/kuka_robodk_ros2 build --build-base /home/bmade-robotics/ros2_ws/build/kuka_robodk_ros2/build install --record /home/bmade-robotics/ros2_ws/build/kuka_robodk_ros2/install.log --single-version-externally-managed install_data
+[0.493s] running egg_info
+[0.493s] writing ../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/PKG-INFO
+[0.494s] writing dependency_links to ../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/dependency_links.txt
+[0.494s] writing entry points to ../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/entry_points.txt
+[0.494s] writing requirements to ../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/requires.txt
+[0.494s] writing top-level names to ../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/top_level.txt
+[0.495s] reading manifest file '../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/SOURCES.txt'
+[0.495s] writing manifest file '../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/SOURCES.txt'
+[0.495s] running build
+[0.495s] running build_py
+[0.496s] copying kuka_robodk_ros2/dual_kuka_node.py -> /home/bmade-robotics/ros2_ws/build/kuka_robodk_ros2/build/lib/kuka_robodk_ros2
+[0.496s] running install
+[0.496s] running install_lib
+[0.497s] copying /home/bmade-robotics/ros2_ws/build/kuka_robodk_ros2/build/lib/kuka_robodk_ros2/dual_kuka_node.py -> /home/bmade-robotics/ros2_ws/install/kuka_robodk_ros2/lib/python3.10/site-packages/kuka_robodk_ros2
+[0.497s] byte-compiling /home/bmade-robotics/ros2_ws/install/kuka_robodk_ros2/lib/python3.10/site-packages/kuka_robodk_ros2/dual_kuka_node.py to dual_kuka_node.cpython-310.pyc
+[0.500s] running install_data
+[0.500s] running install_egg_info
+[0.501s] removing '/home/bmade-robotics/ros2_ws/install/kuka_robodk_ros2/lib/python3.10/site-packages/kuka_robodk_ros2-0.0.0-py3.10.egg-info' (and everything under it)
+[0.501s] Copying ../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info to /home/bmade-robotics/ros2_ws/install/kuka_robodk_ros2/lib/python3.10/site-packages/kuka_robodk_ros2-0.0.0-py3.10.egg-info
+[0.501s] running install_scripts
+[0.512s] Installing dual_kuka_node script to /home/bmade-robotics/ros2_ws/install/kuka_robodk_ros2/lib/kuka_robodk_ros2
+[0.512s] writing list of installed files to '/home/bmade-robotics/ros2_ws/build/kuka_robodk_ros2/install.log'
+[0.525s] Invoked command in '/home/bmade-robotics/ros2_ws/src/kuka_robodk_ros2' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/bmade-robotics/ros2_ws/build/kuka_robodk_ros2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bmade-robotics/ros2_ws/install/kuka_robodk_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/kuka_robodk_ros2 build --build-base /home/bmade-robotics/ros2_ws/build/kuka_robodk_ros2/build install --record /home/bmade-robotics/ros2_ws/build/kuka_robodk_ros2/install.log --single-version-externally-managed install_data

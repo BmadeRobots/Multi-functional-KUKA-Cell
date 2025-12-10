@@ -1,0 +1,22 @@
+running egg_info
+writing ../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/PKG-INFO
+writing dependency_links to ../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/dependency_links.txt
+writing entry points to ../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/entry_points.txt
+writing requirements to ../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/requires.txt
+writing top-level names to ../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/top_level.txt
+reading manifest file '../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/SOURCES.txt'
+writing manifest file '../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/SOURCES.txt'
+running build
+running build_py
+copying kuka_robodk_ros2/dual_kuka_bidirectional.py -> /home/bmade-robotics/ros2_ws/build/kuka_robodk_ros2/build/lib/kuka_robodk_ros2
+running install
+running install_lib
+copying /home/bmade-robotics/ros2_ws/build/kuka_robodk_ros2/build/lib/kuka_robodk_ros2/dual_kuka_bidirectional.py -> /home/bmade-robotics/ros2_ws/install/kuka_robodk_ros2/lib/python3.10/site-packages/kuka_robodk_ros2
+byte-compiling /home/bmade-robotics/ros2_ws/install/kuka_robodk_ros2/lib/python3.10/site-packages/kuka_robodk_ros2/dual_kuka_bidirectional.py to dual_kuka_bidirectional.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/bmade-robotics/ros2_ws/install/kuka_robodk_ros2/lib/python3.10/site-packages/kuka_robodk_ros2-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info to /home/bmade-robotics/ros2_ws/install/kuka_robodk_ros2/lib/python3.10/site-packages/kuka_robodk_ros2-0.0.0-py3.10.egg-info
+running install_scripts
+Installing dual_kuka_node script to /home/bmade-robotics/ros2_ws/install/kuka_robodk_ros2/lib/kuka_robodk_ros2
+writing list of installed files to '/home/bmade-robotics/ros2_ws/build/kuka_robodk_ros2/install.log'

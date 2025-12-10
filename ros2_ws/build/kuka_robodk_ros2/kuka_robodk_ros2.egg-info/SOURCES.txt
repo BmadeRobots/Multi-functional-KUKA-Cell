@@ -1,0 +1,17 @@
+package.xml
+setup.cfg
+setup.py
+../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/PKG-INFO
+../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/SOURCES.txt
+../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/dependency_links.txt
+../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/entry_points.txt
+../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/requires.txt
+../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/top_level.txt
+../../build/kuka_robodk_ros2/kuka_robodk_ros2.egg-info/zip-safe
+kuka_robodk_ros2/__init__.py
+kuka_robodk_ros2/dual_kuka_bidirectional.py
+kuka_robodk_ros2/dual_kuka_node.py
+resource/kuka_robodk_ros2
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

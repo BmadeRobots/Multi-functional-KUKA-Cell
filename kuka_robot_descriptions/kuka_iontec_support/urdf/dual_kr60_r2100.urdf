@@ -1,0 +1,1179 @@
+<?xml version="1.0"?>
+<robot name="dual_kr70_r2100">
+
+  <!-- ROS2 Control configuration for both robots -->
+  <ros2_control name="left_kr70_r2100" type="system">
+    <hardware>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </hardware>
+    <joint name="left_joint_1">
+      <command_interface name="position">
+        <param name="min">-3.2288591125</param>
+        <param name="max">3.2288591125</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-3.14159265358979</param>
+        <param name="max">3.14159265358979</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="left_joint_2">
+      <command_interface name="position">
+        <param name="min">-3.0543261875</param>
+        <param name="max">1.04719755</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-2.75719614004311</param>
+        <param name="max">2.75719614004311</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">-1.5708</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="left_joint_3">
+      <command_interface name="position">
+        <param name="min">-2.0943951</param>
+        <param name="max">2.8797932625</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-2.79252680319093</param>
+        <param name="max">2.79252680319093</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">1.5708</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="left_joint_4">
+      <command_interface name="position">
+        <param name="min">-3.14159265</param>
+        <param name="max">3.14159265</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-4.01425727958696</param>
+        <param name="max">4.01425727958696</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="left_joint_5">
+      <command_interface name="position">
+        <param name="min">-2.1816615625</param>
+        <param name="max">2.1816615625</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-4.01425727958696</param>
+        <param name="max">4.01425727958696</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="left_joint_6">
+      <command_interface name="position">
+        <param name="min">-6.108652375</param>
+        <param name="max">6.108652375</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-5.58505360638185</param>
+        <param name="max">5.58505360638185</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="left_rail_to_track">
+      <command_interface name="position">
+        <param name="min">-5.0</param>
+        <param name="max">5.0</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-2.0</param>
+        <param name="max">2.0</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+  </ros2_control>
+
+  <ros2_control name="right_kr70_r2100" type="system">
+    <hardware>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </hardware>
+    <joint name="right_joint_1">
+      <command_interface name="position">
+        <param name="min">-3.2288591125</param>
+        <param name="max">3.2288591125</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-3.14159265358979</param>
+        <param name="max">3.14159265358979</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="right_joint_2">
+      <command_interface name="position">
+        <param name="min">-3.0543261875</param>
+        <param name="max">1.04719755</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-2.75719614004311</param>
+        <param name="max">2.75719614004311</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">-1.5708</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="right_joint_3">
+      <command_interface name="position">
+        <param name="min">-2.0943951</param>
+        <param name="max">2.8797932625</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-2.79252680319093</param>
+        <param name="max">2.79252680319093</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">1.5708</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="right_joint_4">
+      <command_interface name="position">
+        <param name="min">-3.14159265</param>
+        <param name="max">3.14159265</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-4.01425727958696</param>
+        <param name="max">4.01425727958696</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="right_joint_5">
+      <command_interface name="position">
+        <param name="min">-2.1816615625</param>
+        <param name="max">2.1816615625</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-4.01425727958696</param>
+        <param name="max">4.01425727958696</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="right_joint_6">
+      <command_interface name="position">
+        <param name="min">-6.108652375</param>
+        <param name="max">6.108652375</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-5.58505360638185</param>
+        <param name="max">5.58505360638185</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="right_rail_to_track">
+      <command_interface name="position">
+        <param name="min">-5.0</param>
+        <param name="max">5.0</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-2.0</param>
+        <param name="max">2.0</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+  </ros2_control>
+  
+
+  <!-- DKP Control System (separate system for DKP joints) -->
+  <ros2_control name="dkp_system1" type="system">
+    <hardware>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </hardware>
+    <joint name="middle_dkp_joint1">
+      <command_interface name="position">
+        <param name="min">-3.2288591125</param>
+        <param name="max">3.2288591125</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-3.14159265358979</param>
+        <param name="max">3.14159265358979</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="top_dkp_joint1">
+      <command_interface name="position">
+        <param name="min">-3.2288591125</param>
+        <param name="max">3.2288591125</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-3.14159265358979</param>
+        <param name="max">3.14159265358979</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+  </ros2_control>
+  <ros2_control name="dkp_system2" type="system">
+    <hardware>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </hardware>
+    <joint name="middle_dkp_joint2">
+      <command_interface name="position">
+        <param name="min">-3.2288591125</param>
+        <param name="max">3.2288591125</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-3.14159265358979</param>
+        <param name="max">3.14159265358979</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="top_dkp_joint2">
+      <command_interface name="position">
+        <param name="min">-3.2288591125</param>
+        <param name="max">3.2288591125</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-3.14159265358979</param>
+        <param name="max">3.14159265358979</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+  </ros2_control>
+
+  <!-- Material definitions -->
+  <material name="kuka_orange">
+    <color rgba="1.0 0.3 0.0 1.0"/>
+  </material>
+  
+  <material name="kuka_black">
+    <color rgba="0.2 0.2 0.2 1.0"/>
+  </material>
+  
+  <material name="kuka_grey">
+    <color rgba="0.7 0.7 0.7 1.0"/>
+  </material>
+
+  <!-- Links Section -->
+  <link name="world"/>
+  
+   <!-- DKP Links -->
+  <link name="work_holding">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/final_workholding.stl" />
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/final_workholding.stl" />
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <material name="kuka_black"/>
+    </visual>
+    <inertial>
+      <mass value="50.0"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="20.0" ixy="0.0" ixz="0.0" iyy="20.0" iyz="0.0" izz="10.0"/>
+    </inertial>
+  </link>
+  
+  <!-- DKP Links -->
+  <link name="back_dkp1">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/back_dkp.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/back_dkp.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <material name="kuka_black"/>
+    </visual>
+    <inertial>
+      <mass value="50.0"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="20.0" ixy="0.0" ixz="0.0" iyy="20.0" iyz="0.0" izz="10.0"/>
+    </inertial>
+  </link>
+  
+  <link name="middle_dkp1">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/middle_dkp.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/middle_dkp.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <material name="kuka_orange"/>
+    </visual>
+    <inertial>
+      <mass value="50.0"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="20.0" ixy="0.0" ixz="0.0" iyy="20.0" iyz="0.0" izz="10.0"/>
+    </inertial>
+  </link>
+  
+  <link name="top_dkp1">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/top_dkp.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/top_dkp.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <material name="kuka_black"/>
+    </visual>
+    <inertial>
+      <mass value="10.0"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="20.0" ixy="0.0" ixz="0.0" iyy="20.0" iyz="0.0" izz="10.0"/>
+    </inertial>
+  </link>
+   <!-- DKP Links -->
+  <link name="back_dkp2">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/back_dkp.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/back_dkp.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <material name="kuka_black"/>
+    </visual>
+    <inertial>
+      <mass value="50.0"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="20.0" ixy="0.0" ixz="0.0" iyy="20.0" iyz="0.0" izz="10.0"/>
+    </inertial>
+  </link>
+  
+  <link name="middle_dkp2">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/middle_dkp.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/middle_dkp.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <material name="kuka_orange"/>
+    </visual>
+    <inertial>
+      <mass value="50.0"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="20.0" ixy="0.0" ixz="0.0" iyy="20.0" iyz="0.0" izz="10.0"/>
+    </inertial>
+  </link>
+  
+  <link name="top_dkp2">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/top_dkp.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/top_dkp.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <material name="kuka_black"/>
+    </visual>
+    <inertial>
+      <mass value="10.0"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="20.0" ixy="0.0" ixz="0.0" iyy="20.0" iyz="0.0" izz="10.0"/>
+    </inertial>
+  </link>
+  
+  <!-- Track Link -->
+  <link name="track_link">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/new_track.stl"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/new_track.stl"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <material name="kuka_black"/>
+    </visual>
+    <inertial>
+      <mass value="500.0"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="20.0" ixy="0.0" ixz="0.0" iyy="20.0" iyz="0.0" izz="10.0"/>
+    </inertial>
+  </link>
+
+  <!-- Left Rail Link -->
+  <link name="rail_link_left">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/left_saddle.stl"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/left_saddle.stl"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <material name="kuka_orange"/>
+    </visual>
+    <inertial>
+      <mass value="50.0"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="5.0" ixy="0.0" ixz="0.0" iyy="5.0" iyz="0.0" izz="2.0"/>
+    </inertial>
+  </link>
+
+  <!-- Right Rail Link -->
+  <link name="rail_link_right">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/right_saddle.stl"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/right_saddle.stl"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <material name="kuka_orange"/>
+    </visual>
+    <inertial>
+      <mass value="50.0"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="5.0" ixy="0.0" ixz="0.0" iyy="5.0" iyz="0.0" izz="2.0"/>
+    </inertial>
+  </link>
+
+  <!-- LEFT ROBOT ARM -->
+  <!-- Left Base Link -->
+  <link name="left_base_link">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/collision/base_link.stl"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/base_link.stl"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <material name="kuka_black"/>
+    </visual>
+    <inertial>
+      <mass value="50.0"/>
+      <origin xyz="0 0 0.15"/>
+      <inertia ixx="1.5" ixy="0.0" ixz="0.0" iyy="1.5" iyz="0.0" izz="0.6"/>
+    </inertial>
+  </link>
+
+  <!-- Left Link 1 -->
+  <link name="left_link_1">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/collision/link_1.stl"/>
+      </geometry>
+      <origin rpy="3.1415927 0.0 0.0" xyz="0.0 0.0 0.236000"/>
+    </collision>
+    <inertial>
+      <inertia ixx="5.40709339054184" ixy="0.0" ixz="0.0" iyy="7.71982652844139" iyz="0.0" izz="9.08867781161129"/>
+      <mass value="175.205"/>
+      <origin rpy="-0.7923258603339018 -0.8943966305036485 2.6984590381230245" xyz="0.0386086184755001 -0.0346095020119289 -0.237989526554607"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/link_1.stl"/>
+      </geometry>
+      <material name="kuka_orange"/>
+      <origin rpy="3.1415927 0.0 0.0" xyz="0.0 0.0 0.236000"/>
+    </visual>
+  </link>
+
+  <!-- Left Link 2 -->
+  <link name="left_link_2">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/collision/link_2.stl"/>
+      </geometry>
+      <origin rpy="1.5707963 0.0 1.5707963" xyz="-0.575000 -0.175000 0.054000"/>
+    </collision>
+    <inertial>
+      <inertia ixx="15.3115976467419" ixy="0.0" ixz="0.0" iyy="1.25648697469284" iyz="0.0" izz="15.5308363638855"/>
+      <mass value="108.86"/>
+      <origin rpy="2.0043980356557825 -1.4175712597169723 -0.4411071139781909" xyz="0.322390685283851 0.0011177475656806899 -0.0921965092779717"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/link_2.stl"/>
+      </geometry>
+      <material name="kuka_orange"/>
+      <origin rpy="1.5707963 0.0 1.5707963" xyz="-0.575000 -0.175000 0.054000"/>
+    </visual>
+  </link>
+
+  <!-- Left Link 3 -->
+  <link name="left_link_3">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/collision/link_3.stl"/>
+      </geometry>
+      <origin rpy="1.5707963 0.0 0.0" xyz="-0.175000 1.465000 0.151500"/>
+    </collision>
+    <inertial>
+      <inertia ixx="1.92337293034476" ixy="0.0" ixz="0.0" iyy="1.27849052849714" iyz="0.0" izz="2.39171458731211"/>
+      <mass value="76.987"/>
+      <origin rpy="-1.4493563584878768 -1.5363130245492544 2.877566531592554" xyz="0.0313301089794381 -0.020586332757478502 0.14882084299946702"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/link_3.stl"/>
+      </geometry>
+      <material name="kuka_orange"/>
+      <origin rpy="1.5707963 0.0 0.0" xyz="-0.175000 1.465000 0.151500"/>
+    </visual>
+  </link>
+
+  <!-- Left Link 4 -->
+  <link name="left_link_4">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/collision/link_4.stl"/>
+      </geometry>
+      <origin rpy="0.0 1.5707963 0" xyz="-1.515000 0 0.483050"/>
+    </collision>
+    <inertial>
+      <inertia ixx="0.155169399999395" ixy="0.0" ixz="0.0" iyy="2.40535850557874" iyz="0.0" izz="2.40600523859326"/>
+      <mass value="36.937"/>
+      <origin rpy="0.828589798090399 -1.4728909399076815 -1.576276607483943" xyz="0.000189432198144002 0.024470785786346698 -0.41246255028967"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/link_4.stl"/>
+      </geometry>
+      <material name="kuka_orange"/>
+      <origin rpy="0.0 1.5707963 0" xyz="-1.515000 0 0.483050"/>
+    </visual>
+  </link>
+
+  <!-- Left Link 5 -->
+  <link name="left_link_5">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/collision/link_5.stl"/>
+      </geometry>
+      <origin rpy="1.5707963 0.0 0.0" xyz="-1.210000 1.515000 -0.047950"/>
+    </collision>
+    <inertial>
+      <inertia ixx="0.104253153076611" ixy="0.0" ixz="0.0" iyy="0.080454547765652" iyz="0.0" izz="0.129775394933814"/>
+      <mass value="16.209"/>
+      <origin rpy="-1.5546090234283156 -1.0268303292864105 -0.0223629762980488" xyz="0.0338747121969276 0.00047815719661916203 -0.0563914652353631"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/link_5.stl"/>
+      </geometry>
+      <material name="kuka_orange"/>
+      <origin rpy="1.5707963 0.0 0.0" xyz="-1.210000 1.515000 -0.047950"/>
+    </visual>
+  </link>
+
+  <!-- Left Link 6 -->
+  <link name="left_link_6">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/link_6.stl"/>
+      </geometry>
+      <origin rpy="0.0 1.5707963 0.0" xyz="-1.515000 0.0 1.359000"/>
+    </collision>
+    <inertial>
+      <inertia ixx="0.00543884122921238" ixy="0.0" ixz="0.0" iyy="0.00497050004638771" iyz="0.0" izz="0.00667989273554355"/>
+      <mass value="3.62"/>
+      <origin rpy="-0.2657207469665607 0.000514585534055515 1.571146297496868" xyz="-0.00392541436464088 0.00000541436464088398 -0.00152140883977901"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/link_6.stl"/>
+      </geometry>
+      <material name="kuka_black"/>
+      <origin rpy="0.0 1.5707963 0.0" xyz="-1.515000 0.0 1.359000"/>
+    </visual>
+  </link>
+
+  <!-- RIGHT ROBOT ARM -->
+  <!-- Right Base Link -->
+  <link name="right_base_link">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/collision/base_link.stl"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/base_link.stl"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <material name="kuka_black"/>
+    </visual>
+    <inertial>
+      <mass value="50.0"/>
+      <origin xyz="0 0 0.15"/>
+      <inertia ixx="1.5" ixy="0.0" ixz="0.0" iyy="1.5" iyz="0.0" izz="0.6"/>
+    </inertial>
+  </link>
+
+  <!-- Right Link 1 -->
+  <link name="right_link_1">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/collision/link_1.stl"/>
+      </geometry>
+      <origin rpy="3.1415927 0.0 0.0" xyz="0.0 0.0 0.236000"/>
+    </collision>
+    <inertial>
+      <inertia ixx="5.40709339054184" ixy="0.0" ixz="0.0" iyy="7.71982652844139" iyz="0.0" izz="9.08867781161129"/>
+      <mass value="175.205"/>
+      <origin rpy="-0.7923258603339018 -0.8943966305036485 2.6984590381230245" xyz="0.0386086184755001 -0.0346095020119289 -0.237989526554607"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/link_1.stl"/>
+      </geometry>
+      <material name="kuka_orange"/>
+      <origin rpy="3.1415927 0.0 0.0" xyz="0.0 0.0 0.236000"/>
+    </visual>
+  </link>
+
+  <!-- Right Link 2 -->
+  <link name="right_link_2">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/collision/link_2.stl"/>
+      </geometry>
+      <origin rpy="1.5707963 0.0 1.5707963" xyz="-0.575000 -0.175000 0.054000"/>
+    </collision>
+    <inertial>
+      <inertia ixx="15.3115976467419" ixy="0.0" ixz="0.0" iyy="1.25648697469284" iyz="0.0" izz="15.5308363638855"/>
+      <mass value="108.86"/>
+      <origin rpy="2.0043980356557825 -1.4175712597169723 -0.4411071139781909" xyz="0.322390685283851 0.0011177475656806899 -0.0921965092779717"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/link_2.stl"/>
+      </geometry>
+      <material name="kuka_orange"/>
+      <origin rpy="1.5707963 0.0 1.5707963" xyz="-0.575000 -0.175000 0.054000"/>
+    </visual>
+  </link>
+
+  <!-- Right Link 3 -->
+  <link name="right_link_3">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/collision/link_3.stl"/>
+      </geometry>
+      <origin rpy="1.5707963 0.0 0.0" xyz="-0.175000 1.465000 0.151500"/>
+    </collision>
+    <inertial>
+      <inertia ixx="1.92337293034476" ixy="0.0" ixz="0.0" iyy="1.27849052849714" iyz="0.0" izz="2.39171458731211"/>
+      <mass value="76.987"/>
+      <origin rpy="-1.4493563584878768 -1.5363130245492544 2.877566531592554" xyz="0.0313301089794381 -0.020586332757478502 0.14882084299946702"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/link_3.stl"/>
+      </geometry>
+      <material name="kuka_orange"/>
+      <origin rpy="1.5707963 0.0 0.0" xyz="-0.175000 1.465000 0.151500"/>
+    </visual>
+  </link>
+
+  <!-- Right Link 4 -->
+  <link name="right_link_4">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/collision/link_4.stl"/>
+      </geometry>
+      <origin rpy="0.0 1.5707963 0" xyz="-1.515000 0 0.483050"/>
+    </collision>
+    <inertial>
+      <inertia ixx="0.155169399999395" ixy="0.0" ixz="0.0" iyy="2.40535850557874" iyz="0.0" izz="2.40600523859326"/>
+      <mass value="36.937"/>
+      <origin rpy="0.828589798090399 -1.4728909399076815 -1.576276607483943" xyz="0.000189432198144002 0.024470785786346698 -0.41246255028967"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/link_4.stl"/>
+      </geometry>
+      <material name="kuka_orange"/>
+      <origin rpy="0.0 1.5707963 0" xyz="-1.515000 0 0.483050"/>
+    </visual>
+  </link>
+
+  <!-- Right Link 5 -->
+  <link name="right_link_5">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/collision/link_5.stl"/>
+      </geometry>
+      <origin rpy="1.5707963 0.0 0.0" xyz="-1.210000 1.515000 -0.047950"/>
+    </collision>
+    <inertial>
+      <inertia ixx="0.104253153076611" ixy="0.0" ixz="0.0" iyy="0.080454547765652" iyz="0.0" izz="0.129775394933814"/>
+      <mass value="16.209"/>
+      <origin rpy="-1.5546090234283156 -1.0268303292864105 -0.0223629762980488" xyz="0.0338747121969276 0.00047815719661916203 -0.0563914652353631"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/link_5.stl"/>
+      </geometry>
+      <material name="kuka_orange"/>
+      <origin rpy="1.5707963 0.0 0.0" xyz="-1.210000 1.515000 -0.047950"/>
+    </visual>
+  </link>
+
+  <!-- Right Link 6 -->
+  <link name="right_link_6">
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/link_6.stl"/>
+      </geometry>
+      <origin rpy="0.0 1.5707963 0.0" xyz="-1.515000 0.0 1.359000"/>
+    </collision>
+    <inertial>
+      <inertia ixx="0.00543884122921238" ixy="0.0" ixz="0.0" iyy="0.00497050004638771" iyz="0.0" izz="0.00667989273554355"/>
+      <mass value="3.62"/>
+      <origin rpy="-0.2657207469665607 0.000514585534055515 1.571146297496868" xyz="-0.00392541436464088 0.00000541436464088398 -0.00152140883977901"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/bmade-robotics/ros2_ws/src/kuka_robot_descriptions/kuka_iontec_support/meshes/kr70_r2100/visual/link_6.stl"/>
+      </geometry>
+      <material name="kuka_black"/>
+      <origin rpy="0.0 1.5707963 0.0" xyz="-1.515000 0.0 1.359000"/>
+    </visual>
+  </link>
+
+  <!-- JOINTS SECTION -->
+  <!-- DKP Joints -->
+  <joint name="world_workholding" type="fixed">
+    <parent link="world"/>
+    <child link="work_holding"/>
+    <origin rpy="0 0 1.5708" xyz="-1.0 0 0.1"/>
+  </joint>
+  <!-- DKP Joints -->
+  <joint name="world_dkp1" type="fixed">
+    <parent link="world"/>
+    <child link="back_dkp1"/>
+    <origin rpy="0 0 0" xyz="-1 -5 0"/>
+  </joint>
+  
+  <joint name="middle_dkp_joint1" type="revolute">
+    <axis xyz="1.0 0.0 0.0"/>
+    <parent link="back_dkp1"/>
+    <child link="middle_dkp1"/>
+    <limit effort="1528.892" lower="-3.2288591125" upper="3.2288591125" velocity="3.14159265358979"/>
+    <origin rpy="0 0.0 0.0" xyz="0.0 0.0 0.1"/>
+    <dynamics damping="10.0" friction="1.0"/>
+  </joint>
+  
+  <joint name="top_dkp_joint1" type="revolute">
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="middle_dkp1"/>
+    <child link="top_dkp1"/>
+    <limit effort="1528.892" lower="-3.2288591125" upper="3.2288591125" velocity="3.14159265358979"/>
+    <origin rpy="0 0.0 0.0" xyz="-0.45 -0.01 0.85"/>
+    <dynamics damping="10.0" friction="1.0"/>
+  </joint>
+  <!-- DKP Joints -->
+  <joint name="world_dkp2" type="fixed">
+    <parent link="world"/>
+    <child link="back_dkp2"/>
+    <origin rpy="0 0 0" xyz="-1 5 0"/>
+  </joint>
+  
+  <joint name="middle_dkp_joint2" type="revolute">
+    <axis xyz="1.0 0.0 0.0"/>
+    <parent link="back_dkp2"/>
+    <child link="middle_dkp2"/>
+    <limit effort="1528.892" lower="-3.2288591125" upper="3.2288591125" velocity="3.14159265358979"/>
+    <origin rpy="0 0.0 0.0" xyz="0.0 0.0 0.1"/>
+    <dynamics damping="10.0" friction="1.0"/>
+  </joint>
+  
+  <joint name="top_dkp_joint2" type="revolute">
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="middle_dkp2"/>
+    <child link="top_dkp2"/>
+    <limit effort="1528.892" lower="-3.2288591125" upper="3.2288591125" velocity="3.14159265358979"/>
+    <origin rpy="0 0.0 0.0" xyz="-0.45 -0.01 0.85"/>
+    <dynamics damping="10.0" friction="1.0"/>
+  </joint>
+
+  <!-- Track Connection -->
+  <joint name="world_track" type="fixed">
+    <parent link="world"/>
+    <child link="track_link"/>
+    <origin rpy="0 0 3.1416" xyz="0 0 0.1"/>
+  </joint>
+
+  <!-- Rail Movement Joints -->
+  <joint name="left_rail_to_track" type="prismatic">
+    <axis xyz="0.0 1.0 0.0"/>
+    <parent link="track_link"/>
+    <child link="rail_link_left"/>
+    <origin rpy="0 0 0" xyz="0 3 0.1"/>
+    <limit effort="500.0" lower="-5.0" upper="5.0" velocity="3.0"/>
+    <dynamics damping="10.0" friction="1.0"/>
+  </joint>
+
+  <joint name="right_rail_to_track" type="prismatic">
+    <axis xyz="0.0 1.0 0.0"/>
+    <parent link="track_link"/>
+    <child link="rail_link_right"/>
+    <origin rpy="0 0 0" xyz="0 -3 0.1"/>
+    <limit effort="500.0" lower="-5.0" upper="5.0" velocity="3.0"/>
+    <dynamics damping="10.0" friction="1.0"/>
+  </joint>
+
+  <!-- Robot Base Attachments -->
+  <joint name="left_base_attachment" type="fixed">
+    <parent link="rail_link_left"/>
+    <child link="left_base_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0.42"/>
+  </joint>
+
+  <joint name="right_base_attachment" type="fixed">
+    <parent link="rail_link_right"/>
+    <child link="right_base_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0.42"/>
+  </joint>
+
+  <!-- LEFT ROBOT JOINTS -->
+  <joint name="left_joint_1" type="revolute">
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="left_base_link"/>
+    <child link="left_link_1"/>
+    <limit effort="5528.892" lower="-3.2288591125" upper="3.2288591125" velocity="3.14159265358979"/>
+    <origin rpy="3.141592653589793 0.0 0.0" xyz="0.0 0.0 0.236"/>
+    <dynamics damping="30.0" friction="1.0"/>
+  </joint>
+
+  <joint name="left_joint_2" type="revolute">
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="left_link_1"/>
+    <child link="left_link_2"/>
+    <limit effort="4635.219" lower="-3.0543261875" upper="1.04719755" velocity="2.75719614004311"/>
+    <origin rpy="1.5707963267948966 0.0 0.0" xyz="0.175 0.054 -0.339"/>
+    <dynamics damping="30.0" friction="1.0"/>
+  </joint>
+
+  <joint name="left_joint_3" type="revolute">
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="left_link_2"/>
+    <child link="left_link_3"/>
+    <limit effort="1785.640" lower="-2.0943951" upper="2.8797932625" velocity="2.79252680319093"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.89 0.0 -0.0975"/>
+    <dynamics damping="30.0" friction="1.0"/>
+  </joint>
+
+  <joint name="left_joint_4" type="revolute">
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="left_link_3"/>
+    <child link="left_link_4"/>
+    <limit effort="645.626" lower="-3.14159265" upper="3.14159265" velocity="4.01425727958696"/>
+    <origin rpy="1.5707963267948966 0.0 -1.5707963267948966" xyz="0.30805 -0.05 0.1515"/>
+    <dynamics damping="30.0" friction="1.0"/>
+  </joint>
+
+  <joint name="left_joint_5" type="revolute">
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="left_link_4"/>
+    <child link="left_link_5"/>
+    <limit effort="583.093" lower="-2.1816615625" upper="2.1816615625" velocity="4.01425727958696"/>
+    <origin rpy="0.0 1.5707963267948966 1.5707963267948966" xyz="0.0 0.04795 -0.72695"/>
+    <dynamics damping="30.0" friction="1.0"/>
+  </joint>
+
+  <joint name="left_joint_6" type="revolute">
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="left_link_5"/>
+    <child link="left_link_6"/>
+    <limit effort="339.156" lower="-6.108652375" upper="6.108652375" velocity="5.58505360638185"/>
+    <origin rpy="1.5707963267948966 0.0 -1.5707963267948966" xyz="0.149 0.0 -0.04795"/>
+    <dynamics damping="30.0" friction="1.0"/>
+  </joint>
+
+  <!-- RIGHT ROBOT JOINTS -->
+  <joint name="right_joint_1" type="revolute">
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="right_base_link"/>
+    <child link="right_link_1"/>
+    <limit effort="5528.892" lower="-3.2288591125" upper="3.2288591125" velocity="3.14159265358979"/>
+    <origin rpy="3.141592653589793 0.0 0.0" xyz="0.0 0.0 0.236"/>
+    <dynamics damping="30.0" friction="1.0"/>
+  </joint>
+
+  <joint name="right_joint_2" type="revolute">
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="right_link_1"/>
+    <child link="right_link_2"/>
+    <limit effort="4635.219" lower="-3.0543261875" upper="1.04719755" velocity="2.75719614004311"/>
+    <origin rpy="1.5707963267948966 0.0 0.0" xyz="0.175 0.054 -0.339"/>
+    <dynamics damping="30.0" friction="1.0"/>
+  </joint>
+
+  <joint name="right_joint_3" type="revolute">
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="right_link_2"/>
+    <child link="right_link_3"/>
+    <limit effort="1785.640" lower="-2.0943951" upper="2.8797932625" velocity="2.79252680319093"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.89 0.0 -0.0975"/>
+    <dynamics damping="30.0" friction="1.0"/>
+  </joint>
+
+  <joint name="right_joint_4" type="revolute">
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="right_link_3"/>
+    <child link="right_link_4"/>
+    <limit effort="645.626" lower="-3.14159265" upper="3.14159265" velocity="4.01425727958696"/>
+    <origin rpy="1.5707963267948966 0.0 -1.5707963267948966" xyz="0.30805 -0.05 0.1515"/>
+    <dynamics damping="30.0" friction="1.0"/>
+  </joint>
+
+  <joint name="right_joint_5" type="revolute">
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="right_link_4"/>
+    <child link="right_link_5"/>
+    <limit effort="583.093" lower="-2.1816615625" upper="2.1816615625" velocity="4.01425727958696"/>
+    <origin rpy="0.0 1.5707963267948966 1.5707963267948966" xyz="0.0 0.04795 -0.72695"/>
+    <dynamics damping="30.0" friction="1.0"/>
+  </joint>
+
+  <joint name="right_joint_6" type="revolute">
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="right_link_5"/>
+    <child link="right_link_6"/>
+    <limit effort="339.156" lower="-6.108652375" upper="6.108652375" velocity="5.58505360638185"/>
+    <origin rpy="1.5707963267948966 0.0 -1.5707963267948966" xyz="0.149 0.0 -0.04795"/>
+    <dynamics damping="30.0" friction="1.0"/>
+  </joint>
+
+  <!-- Gazebo specific properties -->
+  <gazebo>
+    <plugin filename="libgz_ros2_control-system.so" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+      <parameters>$(find kuka_iontec_support)/config/dual_kr70_controllers.yaml</parameters>
+      <ros>
+        <remapping>/controller_manager/robot_description:=robot_description</remapping>
+      </ros>
+    </plugin>
+  </gazebo>
+
+  <!-- Gazebo materials -->
+  <gazebo reference="back_dkp">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+
+  <gazebo reference="middle_dkp">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+
+  <gazebo reference="top_dkp">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+
+  <gazebo reference="track_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+
+  <gazebo reference="rail_link_left">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+
+  <gazebo reference="rail_link_right">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+
+  <!-- Left robot Gazebo materials -->
+  <gazebo reference="left_base_link">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+  
+  <gazebo reference="left_link_1">
+    <material>Gazebo/Orange</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+  
+  <gazebo reference="left_link_2">
+    <material>Gazebo/Orange</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+  
+  <gazebo reference="left_link_3">
+    <material>Gazebo/Orange</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+  
+  <gazebo reference="left_link_4">
+    <material>Gazebo/Orange</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+  
+  <gazebo reference="left_link_5">
+    <material>Gazebo/Orange</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+  
+  <gazebo reference="left_link_6">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+
+  <!-- Right robot Gazebo materials -->
+  <gazebo reference="right_base_link">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+  
+  <gazebo reference="right_link_1">
+    <material>Gazebo/Orange</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+  
+  <gazebo reference="right_link_2">
+    <material>Gazebo/Orange</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+  
+  <gazebo reference="right_link_3">
+    <material>Gazebo/Orange</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+  
+  <gazebo reference="right_link_4">
+    <material>Gazebo/Orange</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+  
+  <gazebo reference="right_link_5">
+    <material>Gazebo/Orange</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+  
+  <gazebo reference="right_link_6">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.8</mu1>
+    <mu2>0.8</mu2>
+  </gazebo>
+
+</robot>

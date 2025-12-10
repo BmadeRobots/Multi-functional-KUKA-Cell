@@ -1,0 +1,511 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    # Left robot controllers
+    left_joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    left_arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    left_rail_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    # Right robot controllers
+    right_joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    right_arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    right_rail_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    # Individual DKP1 controllers (for dkp_system1)
+    dkp1_joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    dkp1_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    # Individual DKP2 controllers (for dkp_system2)  
+    dkp2_joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    dkp2_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    # Combined DKP controllers (only if using single dkp_system)
+    dkp_joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    dkp_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+# Left robot joint state broadcaster
+left_joint_state_broadcaster:
+  ros__parameters:
+    joints:
+      - left_joint_1
+      - left_joint_2
+      - left_joint_3
+      - left_joint_4
+      - left_joint_5
+      - left_joint_6
+    interfaces:
+      - position
+      - velocity
+      - effort
+
+# Left robot arm controller
+left_arm_controller:
+  ros__parameters:
+    joints:
+      - left_joint_1
+      - left_joint_2
+      - left_joint_3
+      - left_joint_4
+      - left_joint_5
+      - left_joint_6
+
+    command_interfaces:
+      - position
+
+    state_interfaces:
+      - position
+      - velocity
+
+    state_publish_rate: 50.0
+    action_monitor_rate: 20.0
+
+    allow_partial_joints_goal: false
+    open_loop_control: false  # Enable closed-loop control
+    allow_integration_in_goal_trajectories: true
+    
+    # PID gains for position holding
+    gains:
+      left_joint_1:
+        p: 2000.0
+        i: 10.0
+        d: 50.0
+        i_clamp: 100.0
+        ff_velocity_scale: 0.0
+      left_joint_2:
+        p: 3000.0  # Higher gain for shoulder joint (fights gravity more)
+        i: 15.0
+        d: 80.0
+        i_clamp: 150.0
+        ff_velocity_scale: 0.0
+      left_joint_3:
+        p: 2500.0
+        i: 12.0
+        d: 60.0
+        i_clamp: 120.0
+        ff_velocity_scale: 0.0
+      left_joint_4:
+        p: 1500.0
+        i: 8.0
+        d: 40.0
+        i_clamp: 80.0
+        ff_velocity_scale: 0.0
+      left_joint_5:
+        p: 1000.0
+        i: 5.0
+        d: 30.0
+        i_clamp: 60.0
+        ff_velocity_scale: 0.0
+      left_joint_6:
+        p: 800.0
+        i: 3.0
+        d: 20.0
+        i_clamp: 40.0
+        ff_velocity_scale: 0.0
+    
+    constraints:
+      stopped_velocity_tolerance: 0.01
+      goal_time: 0.6
+      left_joint_1:
+        trajectory: 0.1
+        goal: 0.05
+      left_joint_2:
+        trajectory: 0.1
+        goal: 0.05
+      left_joint_3:
+        trajectory: 0.1
+        goal: 0.05
+      left_joint_4:
+        trajectory: 0.1
+        goal: 0.05
+      left_joint_5:
+        trajectory: 0.1
+        goal: 0.05
+      left_joint_6:
+        trajectory: 0.1
+        goal: 0.05
+
+# Left robot rail controller
+left_rail_controller:
+  ros__parameters:
+    joints:
+      - left_rail_to_track
+
+    command_interfaces:
+      - position
+
+    state_interfaces:
+      - position
+      - velocity
+
+    state_publish_rate: 50.0
+    action_monitor_rate: 20.0
+
+    allow_partial_joints_goal: false
+    open_loop_control: false
+    allow_integration_in_goal_trajectories: true
+    
+    # PID gains for rail positioning
+    gains:
+      left_rail_to_track:
+        p: 5000.0  # High gain for precise positioning
+        i: 20.0
+        d: 100.0
+        i_clamp: 200.0
+        ff_velocity_scale: 0.0
+    
+    constraints:
+      stopped_velocity_tolerance: 0.01
+      goal_time: 0.6
+      left_rail_to_track:
+        trajectory: 0.1
+        goal: 0.05
+
+# Right robot joint state broadcaster
+right_joint_state_broadcaster:
+  ros__parameters:
+    joints:
+      - right_joint_1
+      - right_joint_2
+      - right_joint_3
+      - right_joint_4
+      - right_joint_5
+      - right_joint_6
+    interfaces:
+      - position
+      - velocity
+      - effort
+
+# Right robot arm controller
+right_arm_controller:
+  ros__parameters:
+    joints:
+      - right_joint_1
+      - right_joint_2
+      - right_joint_3
+      - right_joint_4
+      - right_joint_5
+      - right_joint_6
+
+    command_interfaces:
+      - position
+
+    state_interfaces:
+      - position
+      - velocity
+
+    state_publish_rate: 50.0
+    action_monitor_rate: 20.0
+
+    allow_partial_joints_goal: false
+    open_loop_control: false  # Enable closed-loop control
+    allow_integration_in_goal_trajectories: true
+    
+    # PID gains for position holding
+    gains:
+      right_joint_1:
+        p: 2000.0
+        i: 10.0
+        d: 50.0
+        i_clamp: 100.0
+        ff_velocity_scale: 0.0
+      right_joint_2:
+        p: 3000.0  # Higher gain for shoulder joint (fights gravity more)
+        i: 15.0
+        d: 80.0
+        i_clamp: 150.0
+        ff_velocity_scale: 0.0
+      right_joint_3:
+        p: 2500.0
+        i: 12.0
+        d: 60.0
+        i_clamp: 120.0
+        ff_velocity_scale: 0.0
+      right_joint_4:
+        p: 1500.0
+        i: 8.0
+        d: 40.0
+        i_clamp: 80.0
+        ff_velocity_scale: 0.0
+      right_joint_5:
+        p: 1000.0
+        i: 5.0
+        d: 30.0
+        i_clamp: 60.0
+        ff_velocity_scale: 0.0
+      right_joint_6:
+        p: 800.0
+        i: 3.0
+        d: 20.0
+        i_clamp: 40.0
+        ff_velocity_scale: 0.0
+    
+    constraints:
+      stopped_velocity_tolerance: 0.01
+      goal_time: 0.6
+      right_joint_1:
+        trajectory: 0.1
+        goal: 0.05
+      right_joint_2:
+        trajectory: 0.1
+        goal: 0.05
+      right_joint_3:
+        trajectory: 0.1
+        goal: 0.05
+      right_joint_4:
+        trajectory: 0.1
+        goal: 0.05
+      right_joint_5:
+        trajectory: 0.1
+        goal: 0.05
+      right_joint_6:
+        trajectory: 0.1
+        goal: 0.05
+
+# Right robot rail controller
+right_rail_controller:
+  ros__parameters:
+    joints:
+      - right_rail_to_track
+
+    command_interfaces:
+      - position
+
+    state_interfaces:
+      - position
+      - velocity
+
+    state_publish_rate: 50.0
+    action_monitor_rate: 20.0
+
+    allow_partial_joints_goal: false
+    open_loop_control: false
+    allow_integration_in_goal_trajectories: true
+    
+    # PID gains for rail positioning
+    gains:
+      right_rail_to_track:
+        p: 5000.0  # High gain for precise positioning
+        i: 20.0
+        d: 100.0
+        i_clamp: 200.0
+        ff_velocity_scale: 0.0
+    
+    constraints:
+      stopped_velocity_tolerance: 0.01
+      goal_time: 0.6
+      right_rail_to_track:
+        trajectory: 0.1
+        goal: 0.05
+
+# DKP1 joint state broadcaster (for dkp_system1)
+dkp1_joint_state_broadcaster:
+  ros__parameters:
+    joints:
+      - middle_dkp_joint1
+      - top_dkp_joint1
+    interfaces:
+      - position
+      - velocity
+      - effort
+
+# DKP1 controller (for dkp_system1)
+dkp1_controller:
+  ros__parameters:
+    joints:
+      - middle_dkp_joint1
+      - top_dkp_joint1
+
+    command_interfaces:
+      - position
+
+    state_interfaces:
+      - position
+      - velocity
+
+    state_publish_rate: 50.0
+    action_monitor_rate: 20.0
+
+    allow_partial_joints_goal: false
+    open_loop_control: false
+    allow_integration_in_goal_trajectories: true
+    
+    # PID gains for DKP positioning
+    gains:
+      middle_dkp_joint1:
+        p: 1500.0
+        i: 8.0
+        d: 40.0
+        i_clamp: 80.0
+        ff_velocity_scale: 0.0
+      top_dkp_joint1:
+        p: 1000.0
+        i: 5.0
+        d: 30.0
+        i_clamp: 60.0
+        ff_velocity_scale: 0.0
+    
+    constraints:
+      stopped_velocity_tolerance: 0.01
+      goal_time: 0.6
+      middle_dkp_joint1:
+        trajectory: 0.1
+        goal: 0.05
+      top_dkp_joint1:
+        trajectory: 0.1
+        goal: 0.05
+
+# DKP2 joint state broadcaster (for dkp_system2)
+dkp2_joint_state_broadcaster:
+  ros__parameters:
+    joints:
+      - middle_dkp_joint2
+      - top_dkp_joint2
+    interfaces:
+      - position
+      - velocity
+      - effort
+
+# DKP2 controller (for dkp_system2)
+dkp2_controller:
+  ros__parameters:
+    joints:
+      - middle_dkp_joint2
+      - top_dkp_joint2
+
+    command_interfaces:
+      - position
+
+    state_interfaces:
+      - position
+      - velocity
+
+    state_publish_rate: 50.0
+    action_monitor_rate: 20.0
+
+    allow_partial_joints_goal: false
+    open_loop_control: false
+    allow_integration_in_goal_trajectories: true
+    
+    # PID gains for DKP positioning
+    gains:
+      middle_dkp_joint2:
+        p: 1500.0
+        i: 8.0
+        d: 40.0
+        i_clamp: 80.0
+        ff_velocity_scale: 0.0
+      top_dkp_joint2:
+        p: 1000.0
+        i: 5.0
+        d: 30.0
+        i_clamp: 60.0
+        ff_velocity_scale: 0.0
+    
+    constraints:
+      stopped_velocity_tolerance: 0.01
+      goal_time: 0.6
+      middle_dkp_joint2:
+        trajectory: 0.1
+        goal: 0.05
+      top_dkp_joint2:
+        trajectory: 0.1
+        goal: 0.05
+
+# Combined DKP joint state broadcaster (only use if URDF has single dkp_system)
+dkp_joint_state_broadcaster:
+  ros__parameters:
+    joints:
+      - middle_dkp_joint1
+      - top_dkp_joint1
+      - middle_dkp_joint2
+      - top_dkp_joint2
+    interfaces:
+      - position
+      - velocity
+      - effort
+
+# Combined DKP controller (only use if URDF has single dkp_system)
+dkp_controller:
+  ros__parameters:
+    joints:
+      - middle_dkp_joint1
+      - top_dkp_joint1
+      - middle_dkp_joint2
+      - top_dkp_joint2
+
+    command_interfaces:
+      - position
+
+    state_interfaces:
+      - position
+      - velocity
+
+    state_publish_rate: 50.0
+    action_monitor_rate: 20.0
+
+    allow_partial_joints_goal: false
+    open_loop_control: false
+    allow_integration_in_goal_trajectories: true
+    
+    # PID gains for DKP positioning
+    gains:
+      middle_dkp_joint1:
+        p: 1500.0
+        i: 8.0
+        d: 40.0
+        i_clamp: 80.0
+        ff_velocity_scale: 0.0
+      top_dkp_joint1:
+        p: 1000.0
+        i: 5.0
+        d: 30.0
+        i_clamp: 60.0
+        ff_velocity_scale: 0.0
+      middle_dkp_joint2:
+        p: 1500.0
+        i: 8.0
+        d: 40.0
+        i_clamp: 80.0
+        ff_velocity_scale: 0.0
+      top_dkp_joint2:
+        p: 1000.0
+        i: 5.0
+        d: 30.0
+        i_clamp: 60.0
+        ff_velocity_scale: 0.0
+    
+    constraints:
+      stopped_velocity_tolerance: 0.01
+      goal_time: 0.6
+      middle_dkp_joint1:
+        trajectory: 0.1
+        goal: 0.05
+      top_dkp_joint1:
+        trajectory: 0.1
+        goal: 0.05
+      middle_dkp_joint2:
+        trajectory: 0.1
+        goal: 0.05
+      top_dkp_joint2:
+        trajectory: 0.1
+        goal: 0.05
